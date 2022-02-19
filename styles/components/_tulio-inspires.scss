@@ -1,0 +1,91 @@
+.tulio-inspires {
+  padding: 134px 159px;
+  text-align: center;
+  @include mqb(desktop) {
+    padding: 134px 0;
+  }
+  @include mqb(tablet) {
+    padding: 85px 0 94px;
+  }
+  .wrapper {
+    width: 77.55%;
+    @include mqb(tablet) {
+      width: 100%;
+    }
+  }
+  p {
+    width: 47.8%;
+    margin: 34px auto 74px;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: #666666;
+    line-height: 32px;
+    @include mqb(desktop) {
+      font-size: 16px;
+      color: #666666;
+      line-height: 28px;
+    }
+    @include mqb(tablet) {
+      width: 75.8%;
+      margin: 22px auto 43px;
+      font-size: 12px;
+      line-height: 19px;
+    }
+  }
+
+  // .cursive-title {
+  //   width: 100%;
+  //   margin: 0;
+  //   font-family: Conture, serif;
+  //   font-size: 120px;
+  //   color: #999999;
+  //   margin-bottom: 76px;
+  //   @include mqb(tablet) {
+  //     font-size: 60px;
+  //   }
+  // }
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 0 0 33.33%;
+      margin-top: -4px;
+  
+      @include mqb(tablet) {
+        flex: 0 0 50%;
+      }
+      .desktop-image {
+        @include mqb(tablet){
+          display: none;
+        }
+      }
+      .mobile-image {
+        display: none;
+        width: 100%;
+        @include mqb(tablet){
+          display: block;
+        }
+      }
+    }
+  }
+
+  .videos {
+    position: relative;
+    video {
+      width: 100%;
+    }
+    .play-btn {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50px, -50px);
+      transition: 0.3s ease;
+    }
+    .hide {
+      display: none;
+    }
+  }
+}

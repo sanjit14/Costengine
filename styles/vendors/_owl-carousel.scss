@@ -1,0 +1,69 @@
+.owl-carousel {
+	display: block;
+	position: relative;
+	.owl-nav{
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		// position: absolute;
+		bottom: 14px;
+		// width: 100%;
+ 
+		button {
+      width: 240px;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      .owl-next{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, #F9F9F9 0%, rgba(249, 249, 249, 0) 100%); 
+      }
+      .owl-prev {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-90deg, #F9F9F9 0%, rgba(249, 249, 249, 0) 100%);
+      }
+    }
+    
+  [class*=owl-next]:hover {
+  background: linear-gradient(90deg, #F9F9F9 0%, rgba(249, 249, 249, 0) 100%);
+  outline: none;
+}
+  [class*=owl-prev]:hover {
+  background: linear-gradient(-90deg, #F9F9F9 0%, rgba(249, 249, 249, 0) 100%);
+  outline: none;
+}
+
+  [class*=owl-next]:focus, [class*=owl-prev]:focus {
+    outline: none;
+  }
+}
+}
+
+.owl-two {
+  .owl-prev, .owl-next {
+    width: 10% !important;
+    @include mqb(tablet) {
+      display: none !important;
+    }
+  }
+  .owl-dots {
+    margin-top: 58px;
+    @include mqb(tablet) {
+      margin-top: 50px;
+    }
+    button {
+      position: static;
+    }
+  }
+}

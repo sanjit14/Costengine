@@ -1,0 +1,123 @@
+.product-categories {
+  padding: 233px 0 169px;
+  @include mqb(desktop) {
+    padding: 110px 0 70px;
+  }
+  .wrapper {
+    width: 78.3%;
+    max-width: 1500px;
+    @include mqb(desktop) {
+      width: 88.8%;
+    }
+  }
+  .row-2,
+  .row-3 {
+    display: flex;
+    justify-content: space-between;
+    @include mqb(laptop) {
+      flex-direction: column;
+    }
+  }
+
+  .row-2 {
+    margin: 48px 0 62px;
+    @include mqb(laptop) {
+      margin: 0;
+    }
+    .category {
+      width: 48%;
+      @include mqb(laptop){
+        width: 100%;
+      }
+    }
+  }
+
+  .row-3 {
+    .category{
+      &:first-of-type {
+        width: 65%;
+        @include mqb(laptop){
+          width: 100%;
+        }
+      }
+      &:last-of-type {
+        width: 31.7%;
+        @include mqb(laptop){
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .row-4 {
+    display: flex;
+    justify-content: space-between;
+    @include mqb(laptop) {
+      flex-direction: column;
+    }
+  }
+
+  .row-4 {
+    margin: 48px 0 62px;
+    @include mqb(laptop) {
+      margin: 0;
+    }
+    .category {
+      width: 48%;
+      @include mqb(laptop){
+        width: 100%;
+      }
+    }
+  }
+  .category {
+    position: relative;
+    @include mqb(desktop) {
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 33px;
+      color: #333333;
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 20px;
+      left: 46px;
+      @include mqb(desktop) {
+        width: 47%;
+        line-height: 28px;
+        font-size: 24px;
+        left: 20px;
+        bottom: 7px;
+      }
+      @include mqb(mobile){
+        width: 100%;
+      }
+    }
+
+    .mobile-image,
+    .desktop-image {
+      overflow: hidden;
+      img {
+        transition: all 1s ease;
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    .mobile-image {
+      display: none;
+      @include mqb(laptop) {
+        display: flex;
+        // justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .desktop-image {
+      @include mqb(laptop) {
+        display: none;
+      }
+    }
+  }
+}

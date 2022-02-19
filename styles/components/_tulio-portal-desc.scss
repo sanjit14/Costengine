@@ -1,0 +1,116 @@
+.tulio-portal-desc {
+  padding: 187px 0 200px;
+  text-align: center;
+  @include mqb(tablet) {
+    padding: 55px 0 0;
+  }
+
+  .wrapper {
+    width: 85.67%;
+    @include mqb(tablet) {
+      width: 89%;
+    }
+    h2 {
+      @include mqb(tablet) {
+        width: 80%;
+        font-size: 20px;
+        margin: 0 auto;
+        padding-bottom: 0;
+        line-height: 22px;
+      }
+    }
+    > P {
+      margin-top: 20px;
+      font-family: Garamond, serif;
+      font-size: 28px;
+      color: #666666;
+      @include mqb(desktop){
+        font-size: 20px;
+      }
+      @include mqb(tablet) {
+        width: 85%;
+        margin: 20px auto 56px;
+        line-height: 20px;
+        font-size: 18px;
+      }
+    }
+
+    ul {
+      @include mqb(desktop){
+        margin-top: 85px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mqb(tablet) {
+          flex-direction: column;
+          margin-bottom: 96px;
+        }
+        .content {
+          width: 28.5%;
+          text-align: left;
+          @include mqb(desktop) {
+            width: 65%;
+          }
+          @include mqb(tablet) {
+            width: 100%;
+            text-align: center;
+          }
+          .title {
+            width: 60%;
+            margin-bottom: 27px;
+            color: #333333;
+            font-family: Garamond, serif;
+            font-size: 28px;
+            line-height: 31px;
+            text-transform: capitalize;
+            @include mqb(desktop) {
+              width: 80%;
+              font-size: 25px;
+            }
+            @include mqb(tablet) {
+              width: 100%;
+              margin-bottom: 10px;
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+          .text {
+            color: #666666;
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            line-height: 160%;
+            @include mqb(desktop){
+              font-size: 16px;
+            }
+            @include mqb(tablet) {
+              font-size: 12px;
+              font-weight: 300;
+            }
+          }
+        }
+
+        &:last-of-type {
+          width: 100%;
+          flex-direction: column;
+          .content {
+            width: 51%;
+            text-align: center;
+            .title {
+              width: 100%;
+            }
+          }
+          @include mqb(tablet) {
+            margin-bottom: 66px;
+          }
+          .content {
+            @include mqb(tablet) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// ***********
+// MEDIA QUERIES
+// ***********
+
+@mixin custom-max($breakpoint) {
+  @media (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+@mixin custom-min($breakpoint) {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin mqb($breakpoint-name) {
+  @if $breakpoint-name == mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+      @content;
+    }
+  } @else if $breakpoint-name == tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  } @else if $breakpoint-name == laptop {
+    @media (max-width: #{$breakpoint-laptop}) {
+      @content;
+    }
+  } @else if $breakpoint-name == desktop {
+    @media (max-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+  }
+}
+
+//Flex Utilities
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-vertical {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+@mixin flex-horizontal {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}

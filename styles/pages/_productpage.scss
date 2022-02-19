@@ -1,0 +1,276 @@
+.product-page {
+  .banner {
+    background: url("../assets/product-oliver-bannerbg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background: none !important;
+    @include mqb(tablet) {
+      background: none;
+      height: unset;
+    }
+    position: relative;
+    .banner-image-container {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 100vh;
+      overflow-x: auto;
+      overflow-y: hidden;
+      transition: all 0.5s;
+      width: 45%;
+      display: flex;
+      img {
+        width: 100%;
+        object-fit: cover;
+        flex: 0 0 100%;
+        transition: all 2s cubic-bezier(0.71, 0, 0.13, 1.02);
+        transform: scale(1);
+        &.active {
+          transform: scale(1.1);
+        }
+      }
+      @include mqb(tablet) {
+        top: 0px;
+        left: 0px;
+        right: auto;
+        height: 450px;
+        width: 100%;
+        // display: flex;
+        // justify-content: center;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      // &.animation-fade-out-in {
+      //   animation: fade-out-in 1s;
+      // }
+      img {
+        height: 100%;
+        opacity: 0;
+        // transform: scale(1.2);
+      }
+    }
+
+    &.image-settle {
+      .banner-image-container {
+        // position: absolute;
+        // top: 0px;
+        // right: 0px;
+        // height: 100vh;
+        // overflow: hidden;
+        img {
+          animation: image-settle 1s;
+          height: 100%;
+          opacity: 1;
+        }
+        // display: none;
+      }
+      @keyframes image-settle {
+        from {
+          transform: scale(1.2);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      // @keyframes fade-out-in {
+      //   from {
+      //     opacity: 1;
+      //   }
+      //   50% {
+      //     opacity: 0;
+      //   }
+      //   to {
+      //     opacity: 1;
+      //   }
+      // }
+    }
+    @include mqb(tablet) {
+      background: url("../assets/mobile-oliver-bannerbg.svg");
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
+
+    .wrapper {
+      width: 82%;
+
+      .breadcrumb-nav {
+        @include mqb(tablet) {
+          padding-top: 470px;
+        }
+      }
+      .content {
+        padding-top: 440px;
+        margin-left: 17px;
+        @include mqb(laptop) {
+          position: static;
+          padding-top: 49px;
+        }
+        p {
+          width: 41%;
+          margin-top: 0;
+          color: #666666;
+          font-family: Montserrat, sans-serif;
+          font-size: 20px;
+          line-height: 160%;
+
+          @include mqb(desktop) {
+            font-size: 14px;
+          }
+          @include mqb(laptop) {
+            font-size: 14px;
+          }
+          @include mqb(tablet) {
+            width: 100%;
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 160%;
+          }
+        }
+        h2 {
+          font-size: 62px;
+          color: #666666;
+          padding-bottom: 25px;
+          @include mqb(desktop) {
+            font-size: 38px;
+          }
+          @include mqb(laptop) {
+            padding-bottom: 0;
+            font-size: 38px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  .story-behind {
+    padding: 70px 0 0;
+    .wrapper {
+      width: 72.6%;
+      @include mqb(desktop) {
+        width: 88.89%;
+      }
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 138px;
+      @include mqb(tablet) {
+        margin-bottom: 64px;
+      }
+    }
+    ul {
+      li {
+        margin-bottom: 198px;
+        display: flex;
+        justify-content: space-between;
+        .image-container {
+          @include mqb(desktop) {
+            margin-right: 80px;
+            width: 50%;
+          }
+          @include mqb(tablet) {
+            margin-right: 0;
+            width: auto;
+          }
+        }
+        &:last-of-type {
+          margin-bottom: 144px;
+        }
+        @include mqb(tablet) {
+          margin-bottom: 88px;
+          flex-direction: column;
+          &:last-of-type {
+            margin-bottom: 68px;
+          }
+        }
+      }
+      .content {
+        width: 40.67%;
+        padding-top: 84px;
+        text-align: left;
+        @include mqb(laptop) {
+          padding-top: 0;
+          width: 46%;
+          margin-left: 10px;
+        }
+        @include mqb(tablet) {
+          width: 90%;
+          margin: 0 auto;
+          padding-top: 15px;
+          text-align: center;
+        }
+        .title {
+          color: #333333;
+          font-family: EB Garamond, serif;
+          font-size: 28px;
+          margin-bottom: 18px;
+
+          @include mqb(desktop) {
+            font-size: 24px;
+          }
+          @include mqb(tablet) {
+            font-size: 20px;
+          }
+        }
+        .text {
+          font-family: Montserrat, sans-serif;
+          color: #666666;
+          font-size: 20px;
+          line-height: 32px;
+          @include mqb(desktop) {
+            font-size: 16px;
+            line-height: 28px;
+          }
+          @include mqb(laptop) {
+            font-size: 14px;
+            line-height: 23px;
+          }
+          @include mqb(tablet) {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 160%;
+          }
+        }
+      }
+    }
+  }
+
+  .products-mobile {
+    .wrapper {
+      > p {
+        width: 85%;
+        margin: 0 auto;
+        color: #666666;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 160%;
+      }
+    }
+  }
+  .cta-section {
+    .wrapper {
+      width: 62%;
+      @include mqb(tablet) {
+        width: 77.8%;
+        padding: 30px 0 60px;
+      }
+
+      h2 {
+        @include mqb(tablet) {
+          width: 90%;
+          margin-bottom: 25px;
+        }
+      }
+      .cta-button {
+        @include mqb(tablet) {
+          padding: 11.5px 33px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.error500-page {
+  .error-page-banner {
+    background: url(../assets/404bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wrapper {
+      width: 73%;
+      display: flex;
+      align-items: center;
+      .content {
+        margin: 370px 0 486px;
+        h2 {
+          color: #FFFFFF;
+          font-family: Garamond, serif;
+          font-size: 62px;
+          line-height: 70px;
+        }
+        p {
+          width: 65%;
+          margin-bottom: 47px;
+          color: #666666;
+          font-family: Montserrat;
+          font-size: 20px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+}

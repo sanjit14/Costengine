@@ -1,0 +1,157 @@
+// .login-page {
+  .login-content {
+    padding: 282px 0 240px;
+    @include mqb(tablet){
+      padding: 75px 0 28px;
+    }
+    .wrapper {
+      width: 80.6%;
+      display: flex;
+      justify-content: space-between;
+      @include mqb(tablet){
+        width: 88.8%;
+        flex-direction: column;
+      }
+
+      .banner {
+        width: 64.85%;
+        height: auto;
+        background: none;
+        position: relative;
+        @include mqb(tablet){
+          width: 100%;
+        }
+        .image-container {
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: -1;
+          @include mqb(tablet){
+            width: 280px;
+            top: 52px;
+          }
+        }
+
+        .cursive-title {
+          color: #333333;
+          font-size: 112px;
+          line-height: 145px;
+          @include mqb(tablet){
+            font-size: 40px;
+            line-height: 52px;
+          }
+        }
+
+        .sub-title {
+          color: #666666;
+          font-family: Montserrat;
+          font-size: 20px;
+          line-height: 160%;
+          @include mqb(tablet){
+            width: 70%;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 160%;
+          }
+        }
+      }
+
+      .login-form {
+        width: 25.83%;
+        @include mqb(desktop){
+          width: 50%;
+        }
+        @include mqb(tablet){
+          width: 100%;
+          margin-top: 136px;
+        }
+        h2 {
+          padding-bottom: 0;
+          margin-bottom: 40px;
+          @include mqb(tablet){
+            margin-bottom: 17px;
+          }
+        }
+
+        .not-member {
+          margin-top: 65px;
+          @include mqb(tablet){
+            width: 87.8%;
+            margin: 23px auto 0;
+          }
+          p {
+            margin-bottom: 40px;
+            color: #333333;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 500;
+            @include mqb(tablet){
+              margin-bottom: 21px;
+              font-weight: 300;
+              font-size: 12px;
+            }
+          }
+          .cta-button {
+            width: 100%;
+            margin-top: 0;
+          }
+        }
+      }
+
+      form {
+        @include mqb(tablet){
+          width: 87.8%;
+          margin: 0 auto;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+        input {
+          padding: 14px 20px;
+          margin-bottom: 19px;
+          background: #F2F2F2;
+          @include mqb(tablet){
+            width: 100%;
+            margin: 0 auto 10px;
+            padding: 10px 22px;
+          }
+          border-radius: 4px;
+          &::placeholder {
+            color: #999999;
+            font-family: Montserrat;
+            font-size: 16px;
+            @include mqb(tablet){
+              font-size: 12px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      p {
+        color: #111111;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        @include mqb(tablet){
+         font-size: 12px;
+        }
+      }
+      button {
+        width: 100%;
+        margin-top: 56px;
+        background-color: #111111;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 16px;
+        padding: 18px 0;
+        @include mqb(tablet){
+          font-size: 12px;
+          margin-top: 36px;
+          padding: 11px 0;
+        }
+      }
+      }
+    }
+  }
+// }

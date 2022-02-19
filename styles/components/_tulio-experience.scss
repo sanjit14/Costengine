@@ -1,0 +1,110 @@
+.tulio-experience {
+  padding: 180px 0 0;
+  @include mqb(laptop) {
+    padding: 0;
+  }
+  .wrapper {
+    width: 77%;
+    margin: 0 auto;
+    text-align: center;
+    @include mqb(desktop) {
+      width: 88.9%;
+      padding: 60px 0 70px;
+      //   border-bottom: 1px solid #999999;
+    }
+
+    .sub-title {
+      margin: 20px 0 100px;
+      color: #666666;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(laptop) {
+        margin: 20px 0 95px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 160%;
+      }
+    }
+
+    ul {
+      padding-top: 144px;
+      @include mqb(desktop) {
+        padding-top: 0;
+      }
+      li {
+        margin-bottom: 240px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mqb(desktop) {
+          margin-bottom: 136px;
+        }
+        @include mqb(laptop) {
+          flex-direction: row;
+        }
+        @include mqb(tablet) {
+          flex-direction: column;
+          margin-bottom: 136px;
+        }
+
+        &:last-of-type {
+          @include mqb(laptop) {
+            margin-bottom: 0;
+          }
+        }
+
+        .content {
+          width: 50%;
+          // padding-top: 84px;
+          text-align: left;
+          @include mqb(desktop) {
+            width: 50%;
+            margin-left: 35px;
+          }
+          @include mqb(tablet) {
+            width: 100%;
+            padding-top: 30px;
+            margin-left: 0;
+            text-align: center;
+          }
+          .step {
+            color: #333333;
+            font-family: EB Garamond, serif;
+            font-size: 38px;
+            margin-bottom: 30px;
+            @include mqb(desktop) {
+              font-size: 30px;
+            }
+            @include mqb(laptop) {
+              font-size: 20px;
+            }
+            .bold {
+              margin-right: 30px;
+              @include mqb(laptop) {
+                margin-right: 15px;
+              }
+            }
+          }
+          .text {
+            font-family: Montserrat, sans-serif;
+            color: #666666;
+            font-size: 20px;
+            line-height: 32px;
+            @include mqb(desktop) {
+              font-size: 16px;
+              line-height: 26px;
+            }
+            @include mqb(laptop) {
+              font-weight: 300;
+              font-size: 12px;
+              line-height: 160%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

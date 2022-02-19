@@ -1,0 +1,123 @@
+.two-cta-section {
+  display: flex;
+  background: none;
+  padding: 0;
+  .cta-section-container {
+    overflow: hidden;
+    flex: 0 0 50%;
+    .section-one,
+    .section-two {
+      transition: all 1.5s;
+      // &:hover {
+      //   transform: scale(1.1);
+      // }
+    }
+  }
+  @include mqb(tablet) {
+    flex-direction: column;
+  }
+  .section-one,
+  .section-two {
+    // width: 50%;
+    // padding: 100px 0;
+    transition: 1s ease;
+    @include mqb(desktop){
+      height: 300px;
+    }
+    @include mqb(tablet){
+      height: auto;
+    }
+
+    img{
+      transition: 1s ease;
+    }
+    h2 {
+      margin-bottom: 55px;
+      color: #ffffff;
+      @include mqb(desktop){
+        padding-bottom: 0;
+      }
+      @include mqb(laptop){
+        padding-bottom: 0;
+        margin-bottom: 40px;
+      }
+      @include mqb(tablet) {
+        margin-bottom: 35px;
+      }
+    }
+    .cta-button {
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+    @include mqb(tablet) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  .wrapper {
+    width: 57%;
+    padding: 100px 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mqb(desktop) {
+      width: 80%;
+    }
+    @include mqb(laptop){
+      padding: 100px 0;
+    }
+    @include mqb(tablet) {
+      position: static;
+      width: 72.8%;
+      padding: 30px 0 38px;
+      transform: none;
+
+    }
+  }
+  .section-one {
+    background-position: bottom right;
+    background-size: cover;
+    position: relative;
+    transition: 1s ease;
+    &:hover {
+      img {
+        transition: 1s ease;
+        transform: scale(1.05);
+      }
+    }
+    @include mqb(tablet) {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)),
+      url(../assets/bannerbg.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .section-two {
+    background-position: bottom right;
+    background-size: cover;
+    position: relative;
+    transition: 1s ease;
+    &:hover {
+      img {
+        transition: 1s ease;
+        transform: scale(1.05);
+      }
+    }
+    @include mqb(tablet) {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)),
+      url(../assets/bannerbg.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      img {
+        display: none;
+      }
+    }
+  }
+}

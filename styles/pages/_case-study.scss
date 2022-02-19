@@ -1,0 +1,175 @@
+.case-study-page {
+  header {
+    &:hover nav a {
+      color: #6a3d45 !important;
+    }
+
+    nav {
+      .change-search {
+        font-size: 0;
+        ::after {
+          content: url(../assets/search.svg) !important;
+        }
+      }
+    }
+  }
+  .banner {
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mqb(tablet) {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .wrapper {
+      width: 100%;
+    }
+    .breadcrumb-nav {
+      span {
+        margin-left: 10.8%;
+        color: #ffffff;
+        font-size: 16px;
+        font-family: Montserrat;
+        line-height: 170%;
+        @include mqb(tablet) {
+          margin-left: 5.8%;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 160%;
+        }
+
+        &::before {
+          content: url(../assets/white-arrow.svg);
+          margin-right: 18px;
+          vertical-align: sub;
+        }
+      }
+    }
+    .content {
+      width: 40%;
+      padding: 28px 75px;
+      margin-left: 5.9%;
+      margin-top: 18.5%;
+      background: rgba(246, 246, 246, 0.7);
+      color: #333333;
+      font-family: Garamond, serif;
+      @include mqb(desktop) {
+        width: auto;
+        padding: 28px 55px;
+      }
+      @include mqb(tablet) {
+        padding: 17px 22px;
+        margin-top: 94px;
+        width: 88.9%;
+      }
+      h2 {
+        padding-bottom: 0;
+        font-size: 38px;
+        line-height: 43px;
+        @include mqb(desktop) {
+          font-size: 30px;
+        }
+        @include mqb(tablet) {
+          font-size: 20px;
+          line-height: 22px;
+        }
+      }
+      p {
+        font-size: 62px;
+        line-height: 70px;
+        @include mqb(desktop) {
+          font-size: 38px;
+          line-height: 50px;
+        }
+        @include mqb(tablet) {
+          font-size: 38px;
+          line-height: 43px;
+        }
+      }
+    }
+  }
+  .case-study-content {
+    padding: 150px 0 88px;
+    @include mqb(tablet) {
+      padding: 95px 0 105px;
+    }
+    .wrapper {
+      width: 73%;
+      @include mqb(laptop) {
+        width: 88.9%;
+      }
+    }
+    p {
+      font-family: Montserrat;
+      color: #666666;
+      font-size: 20px;
+      line-height: 160%;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(tablet) {
+        font-weight: 300;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    ul {
+      padding: 150px 0;
+      @include mqb(tablet) {
+        padding: 95px 0;
+      }
+      li {
+        margin-bottom: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mqb(desktop) {
+          margin-bottom: 150px;
+        }
+        @include mqb(tablet) {
+          margin-bottom: 70px;
+          flex-direction: column;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        div {
+          @include mqb(desktop) {
+            width: 50%;
+          }
+          @include mqb(laptop) {
+            width: 100%;
+          }
+        }
+
+        p {
+          width: 44%;
+          @include mqb(laptop) {
+            margin-left: 15px;
+          }
+          @include mqb(tablet) {
+            margin-top: 35px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .case-study-images {
+    ul {
+      width: 100%;
+      display: flex;
+      display: -webkit-box;
+      justify-content: space-between;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+
+      li {
+        margin-right: 14px;
+      }
+    }
+  }
+}

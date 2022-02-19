@@ -1,0 +1,67 @@
+.image-container {
+  img {
+    max-width: 100%;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 64.68%;
+  margin: 0 auto;
+  @include mqb(tablet) {
+    width: 77%;
+  }
+}
+
+.banner {
+  .content {
+    position: absolute;
+    bottom: 20%;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  height: 1px;
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-track:horizontal {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8c8c8c;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: transparent;
+}
+
+.mobile-image {
+  display: none;
+  @include mqb(mobile) {
+    display: block;
+  }
+}
+
+.desktop-image {
+  @include mqb(mobile) {
+    display: none;
+  }
+}
+
+input {
+  outline: none;
+  border: none;
+}

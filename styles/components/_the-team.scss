@@ -1,0 +1,83 @@
+.team {
+  padding-bottom: 132px;
+  text-align: center;
+  @include mqb(tablet) {
+    padding: 66px 0 40px;
+  }
+  .wrapper {
+    width: 75.3%;
+    @include mqb(desktop) {
+      width: 98%;
+    }
+    @include mqb(tablet) {
+      width: 78%;
+    }
+  }
+  p {
+    color: #666666;
+    font-size: 28px;
+    font-family: EB Garamond, serif;
+    @include mqb(desktop) {
+      font-size: 20px;
+      line-height: 115%;
+    }
+    @include mqb(tablet) {
+      font-size: 14px;
+      line-height: 115%;
+    }
+  }
+
+  ul {
+    margin: 76px 0 0;
+    display: flex;
+    justify-content: space-between;
+    @include mqb(laptop) {
+      flex-direction: column;
+    }
+    @include mqb(tablet) {
+      flex-direction: column;
+    }
+    li {
+      width: 29.3%;
+      @include mqb(laptop) {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+      @include mqb(tablet) {
+        width: 100%;
+        margin-bottom: 80px;
+      }
+      .title {
+        margin-bottom: 30px;
+        color: #333333;
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        @include mqb(desktop) {
+          // margin-bottom: 15px;
+          font-size: 16px;
+        }
+        @include mqb(tablet) {
+          margin-bottom: 15px;
+          font-size: 12px;
+        }
+      }
+      .text {
+        color: #666666;
+        font-family: Montserrat, sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+        @include mqb(desktop) {
+          font-size: 14px;
+          line-height: 26px;
+        }
+        @include mqb(tablet) {
+          font-size: 12px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+}

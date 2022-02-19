@@ -1,0 +1,43 @@
+.hotelier-page {
+  .banner {
+    background: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include mqb(tablet) {
+      background: none;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .content {
+      width: 794px;
+      padding: 43px 88px;
+      //   background: rgba(246, 246, 246, 0.7);
+      position: absolute;
+      left: 107px;
+      bottom: 219px;
+      background: rgba(246, 246, 246, 0.7);
+      @include mqb(desktop) {
+        width: 42.8%;
+
+        left: 80px;
+        bottom: 100px;
+        padding: 30px 60px;
+      }
+      @include mqb(tablet) {
+        width: 65.8%;
+        padding: 25px 30px 19px;
+        left: 20px;
+        bottom: 20%;
+      }
+
+      h2 {
+        width: 70%;
+        @include mqb(tablet) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

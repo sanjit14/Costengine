@@ -1,0 +1,319 @@
+.care-program-page {
+  header {
+    &:hover nav a {
+      color: #6a3d45 !important;
+    }
+    nav {
+      .change-search {
+        font-size: 0;
+        ::after {
+          content: url(../assets/search.svg) !important;
+        }
+      }
+    }
+  }
+  .banner {
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mqb(tablet) {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .transparent-bg {
+      padding: 56px 73px 57px 80px;
+      background: rgba(246, 246, 246, 0.7);
+      position: absolute;
+      left: 107px;
+      bottom: 219px;
+      @include mqb(desktop) {
+        padding: 40px 73px 40px 80px;
+        left: 80px;
+        bottom: 100px;
+      }
+      @include mqb(tablet) {
+        width: 61%;
+        padding: 35px 30px 32px;
+        left: 20px;
+        bottom: 20%;
+      }
+
+      h2 {
+        width: 100%;
+        padding-bottom: 0;
+        @include mqb(tablet) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .right-care {
+    // background: url(../assets/care-cta.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    padding: 0;
+    position: relative;
+    transition: 1s ease;
+    &:hover {
+      img {
+        transition: 1s ease;
+        transform: scale(1.05);
+      }
+    }
+
+    @include mqb(tablet) {
+      background: url(../assets/mobile-care-cta.svg);
+    }
+    @include mqb(tablet) {
+      padding: 60px 0;
+    }
+
+    .image-container {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      transition: 1s ease;
+    }
+    img {
+      width: 100%;
+      transition: 1s ease;
+      @include mqb(tablet) {
+        display: none;
+      }
+    }
+
+    .overlay {
+      background: rgba(22, 21, 21, 0.384);
+      width: 100%;
+      z-index: 1;
+      position: absolute;
+      height: 100%;
+      @include mqb(tablet) {
+        display: none;
+      }
+    }
+    .wrapper {
+      flex-direction: column;
+      padding: 100px 0;
+      position: relative;
+      // top: 0;
+      // left: 50%;
+      // transform: translateX(-50%);
+      z-index: 1;
+      @include mqb(desktop) {
+        width: 75%;
+      }
+      @include mqb(laptop) {
+        // top: -45px;
+      }
+      @include mqb(tablet) {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+        transform: none;
+      }
+      > div {
+        width: 100%;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        @include mqb(tablet) {
+          width: 100%;
+          flex-direction: column;
+        }
+        p {
+          width: 56%;
+          font-family: Montserrat, sans-serif;
+          font-size: 20px;
+          line-height: 160%;
+          @include mqb(desktop) {
+            font-size: 16px;
+          }
+          @include mqb(tablet) {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    form {
+      input {
+        width: 32.6%;
+        margin-bottom: 12px;
+        padding: 13px 22px;
+        border-radius: 10px;
+        &::placeholder {
+          font-size: 18px;
+        }
+        @include mqb(laptop) {
+          width: 100%;
+          border-radius: 10px;
+          padding: 10px 22px;
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+      }
+      button {
+        border: 1px solid #fff;
+        margin-top: 40px;
+        margin-left: 41.65%;
+        color: #ffffff;
+        background: transparent;
+        opacity: 0.7;
+        @include mqb(tablet) {
+          margin-left: 0;
+          padding: 12px 44px;
+          // background: rgba(255, 255, 255, 0.7);
+          // color: #333333;
+        }
+      }
+    }
+  }
+  .service {
+    padding: 124px 0 140px;
+    @include mqb(tablet) {
+      padding: 52px 0 66px;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include mqb(desktop) {
+        width: 77%;
+      }
+      @include mqb(tablet) {
+        width: 88.89%;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content {
+        width: 37.87%;
+        @include mqb(desktop) {
+          width: 63.87%;
+          margin-left: 80px;
+        }
+        @include mqb(tablet) {
+          width: 88%;
+          margin-left: 0;
+          margin-top: 30px;
+        }
+        .title {
+          color: #333333;
+          font-family: Garamond, serif;
+          font-size: 38px;
+          @include mqb(desktop) {
+            font-size: 24px;
+          }
+          @include mqb(tablet) {
+            font-size: 20px;
+          }
+        }
+
+        .text {
+          margin-top: 27px;
+          color: #666666;
+          font-family: Montserrat;
+          font-size: 20px;
+          line-height: 160%;
+          @include mqb(desktop) {
+            font-size: 16px;
+          }
+          @include mqb(tablet) {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+
+  .choose-plan {
+    padding: 93px 0;
+    text-align: center;
+    background: #f9f9f9;
+    @include mqb(tablet) {
+      padding: 48px 0 35px;
+    }
+
+    .wrapper {
+      width: 63.05%;
+      @include mqb(desktop) {
+        width: 80%;
+      }
+      @include mqb(tablet) {
+        width: 88.89%;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    h2 {
+      text-transform: capitalize;
+      @include mqb(desktop) {
+        padding-bottom: 60px;
+      }
+      @include mqb(tablet) {
+        text-transform: none;
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      @include mqb(tablet) {
+        flex-direction: column;
+      }
+      div {
+        width: 47.92%;
+        padding: 40px;
+        background: #ffffff;
+        box-shadow: 0px 14px 84px rgba(0, 0, 0, 0.08);
+        @include mqb(tablet) {
+          width: 100%;
+          padding: 40px 52px;
+          margin-bottom: 50px;
+        }
+
+        .title {
+          font-family: Garamond, serif;
+          font-size: 28px;
+          @include mqb(desktop) {
+            font-size: 24px;
+          }
+          @include mqb(tablet) {
+            font-size: 14px;
+          }
+        }
+        .text,
+        .step {
+          color: #666666;
+          font-family: Montserrat;
+          font-size: 20px;
+          line-height: 160%;
+          @include mqb(desktop) {
+            font-size: 16px;
+          }
+          @include mqb(tablet) {
+            font-size: 12px;
+          }
+        }
+        .text {
+          margin: 29px 0 34px;
+          @include mqb(tablet) {
+            margin: 24px 0 32px;
+          }
+        }
+        .step {
+          color: #333333;
+        }
+      }
+    }
+  }
+}

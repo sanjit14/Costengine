@@ -1,0 +1,165 @@
+.about-us-page {
+  header {
+    &:hover nav a {
+      color: #6a3d45 !important;
+    }
+    nav {
+      .change-search {
+        font-size: 0;
+        ::after {
+          content: url(../assets/search.svg) !important;
+        }
+      }
+    }
+  }
+  .banner {
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mqb(tablet) {
+      background: url(../assets/mobile-about-us-bannerbg.svg);
+    }
+    .transparent-bg {
+      padding: 56px 73px 57px 80px;
+      background: rgba(246, 246, 246, 0.7);
+      position: absolute;
+      left: 107px;
+      bottom: 219px;
+      @include mqb(desktop) {
+        padding: 40px 73px 40px 80px;
+        left: 80px;
+        bottom: 100px;
+      }
+      @include mqb(tablet) {
+        width: 65%;
+        padding: 35px 30px 32px;
+        left: 20px;
+        bottom: 20%;
+      }
+
+      h2 {
+        width: 100%;
+        padding-bottom: 0;
+        @include mqb(tablet) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .about-tulio {
+    padding: 119px 0;
+    @include mqb(tablet) {
+      padding: 52px 0 100px;
+    }
+    .wrapper {
+      width: 72.23%;
+      @include mqb(desktop) {
+        width: 88.8%;
+      }
+      ul {
+        li {
+          margin-bottom: 170px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          @include mqb(desktop) {
+            margin-bottom: 150px;
+          }
+          @include mqb(tablet) {
+            flex-direction: column;
+            margin-bottom: 87px;
+          }
+          &:last-of-type {
+            width: 75%;
+            margin: 0 auto;
+            flex-direction: column;
+            text-align: center;
+          }
+
+          p {
+            color: #666666;
+          }
+          .content {
+            width: 43.11%;
+            @include mqb(desktop) {
+              width: 55%;
+              margin-left: 80px;
+            }
+            @include mqb(laptop) {
+              width: 88%;
+              margin-left: 20px;
+            }
+            @include mqb(tablet) {
+              width: 100%;
+              margin-top: 30px;
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+
+          .title {
+            color: #333333;
+            @include mqb(desktop) {
+              font-size: 30px;
+            }
+          }
+
+          .tulio-logo {
+            width: 84.4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include mqb(tablet) {
+              width: 69%;
+              margin: 0 auto;
+            }
+
+            .title {
+              color: #999999;
+              @include mqb(tablet) {
+                width: 67%;
+                text-align: right;
+                font-size: 18px;
+              }
+            }
+
+            div {
+              @include mqb(desktop) {
+                width: 50%;
+              }
+              @include mqb(tablet) {
+                width: 83%;
+              }
+            }
+          }
+
+          .text {
+            margin-top: 24px;
+            @include mqb(desktop) {
+              font-size: 16px;
+            }
+
+            p:not(:last-of-type) {
+              margin-bottom: 34px;
+            }
+            .founder-name {
+              margin-bottom: 0;
+              @include mqb(tablet) {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .founder {
+          .content {
+            @include mqb(tablet) {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

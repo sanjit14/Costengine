@@ -1,0 +1,141 @@
+.designers-page {
+  .banner {
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include mqb(tablet) {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .wrapper {
+      width: 74.45%;
+      @include mqb(desktop) {
+        width: 80.45%;
+      }
+      @include mqb(tablet) {
+        width: 88.89%;
+      }
+    }
+    .content {
+      padding-top: 206px;
+      position: absolute;
+      top: 0;
+      @include mqb(desktop) {
+        padding-top: 170px;
+        top: 7%;
+      }
+      @include mqb(tablet) {
+        width: 68.75%;
+        padding-top: 213px;
+        line-height: 160%;
+      }
+      .sub-title {
+        margin-top: 12px;
+        color: #666666;
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        @include mqb(desktop) {
+          font-size: 16px;
+        }
+        @include mqb(tablet) {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+    .login {
+      width: 24.6%;
+      padding: 22px 53px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      position: absolute;
+      right: 195px;
+      bottom: 56px;
+      background: rgba(246, 246, 246, 0.7);
+      @include mqb(desktop) {
+        width: auto;
+        padding: 22px 30px 22px;
+        right: 90px;
+        bottom: 56px;
+      }
+      @include mqb(tablet) {
+        margin-top: 179px;
+        padding: 22px 24px 23px;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 35px;
+      }
+
+      p {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        @include mqb(desktop) {
+          font-size: 16px;
+        }
+        @include mqb(tablet) {
+          font-family: EB Garamond, serif;
+        }
+      }
+      .cta-button {
+        margin-top: 0;
+        padding: 15px 32px;
+        position: static;
+        @include mqb(desktop) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .cta-section-container {
+    position: relative;
+    &:hover {
+      .image-container {
+        transform: 1s ease;
+        transform: scale(1.05);
+      }
+    }
+
+    .cta-section {
+      padding: 0;
+      .image-container {
+        width: 100%;
+        display: flex;
+        bottom: 0;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper {
+        padding: 100px 0;
+        @include mqb(laptop) {
+          padding: 120px 0 49px;
+        }
+        @include mqb(tablet) {
+          padding: 30px 0;
+        }
+      }
+    }
+  }
+
+  .signup {
+    h2 {
+      @include mqb(tablet) {
+        line-height: 140%;
+      }
+    }
+    button {
+      margin-top: 40px;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      @include mqb(tablet) {
+        margin-top: 15px;
+        padding: 11.5px 46.5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Conture";
+  src: url("../assets/fonts/ContureScript.eot");
+  src: url("../assets/fonts/ContureScript.woff") format("woff"),
+    url("../assets/fonts/ContureScript.eot") format("embedded-opentype"),
+    url("../assets/fonts/ContureScript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cursive-title {
+  font-family: Conture, serif !important;
+  font-size: 120px !important;
+  color: #999999 !important;
+  line-height: 120px !important;
+  @include mqb(desktop) {
+    font-size: 90px !important;
+    line-height: 90px !important;
+    font-weight: 400 !important;
+  }
+  @include mqb(tablet) {
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+}
+
+h2 {
+  font-family: EB Garamond, serif;
+  color: #333333;
+  font-size: 38px;
+  padding-bottom: 25px;
+  line-height: 42px;
+
+  @include mqb(desktop) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  @include mqb(tablet) {
+    font-size: 20px;
+    line-height: 1;
+    padding-bottom: 18px;
+  }
+}
+
+.title {
+  font-family: Garamond, serif;
+  font-size: 38px;
+  @include mqb(desktop) {
+    font-size: 24px;
+  }
+  @include mqb(tablet) {
+    font-size: 20px;
+  }
+}
+
+.text {
+  font-family: Montserrat;
+  font-size: 20px;
+  @include mqb(desktop) {
+    font-size: 16px;
+    // line-height: 38px;
+  }
+  line-height: 160%;
+  @include mqb(tablet) {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.topic {
+  color: #666666;
+  font-family: Garamond, serif;
+  font-size: 28px;
+  @include mqb(desktop) {
+    font-size: 22px;
+  }
+}
+
+.question {
+  color: #666666;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+  @include mqb(desktop) {
+    font-size: 16px;
+  }
+  @include mqb(tablet) {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.topic-section {
+  margin-bottom: 50px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .title {
+    color: #666666;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    @include mqb(desktop) {
+      font-size: 22px;
+    }
+    @include mqb(tablet) {
+      font-size: 18px;
+    }
+  }
+  .text {
+    @include mqb(tablet) {
+      text-align: justify;
+    }
+  }
+}

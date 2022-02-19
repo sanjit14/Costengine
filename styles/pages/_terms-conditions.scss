@@ -1,0 +1,23 @@
+.terms-conditions-page {
+    .terms-conditions-content{
+      padding: 199px 0 100px;
+      @include mqb(tablet) {
+        padding: 107px 0 70px;
+    }
+
+      h2 {
+        padding-bottom: 0;
+        margin-bottom: 20px;
+      }
+
+      h2 + p {
+          margin-bottom: 70px;
+      }
+
+      .title {
+        @include mqb(tablet) {
+          line-height: 20px;
+      }
+      }
+    }
+  }

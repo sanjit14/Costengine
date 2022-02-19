@@ -1,0 +1,13 @@
+.contact-us-page {
+  .fulfillment-center {
+    @include mqb(tablet){
+      padding: 80px 0 100px !important;
+    }
+    ul {
+      @include mqb(mobile){
+        flex-wrap: wrap;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.faq-page {
+  .faq-content {
+    padding: 199px 0 100px;
+    @include mqb(tablet) {
+      padding: 107px 0 70px;
+    }
+
+    h2 {
+      padding-bottom: 0;
+      margin-bottom: 81px;
+      @include mqb(tablet) {
+        margin-bottom: 52px;
+      }
+    }
+
+    .topic-section {
+      overflow: hidden;
+      @include mqb(tablet) {
+        margin-bottom: 72px;
+      }
+    }
+    .title {
+      margin-bottom: 61px;
+      &::after {
+        content: url(../assets/topic-arrow-up.svg);
+        margin-left: 28.5px;
+        vertical-align: text-top;
+      }
+      @include mqb(tablet) {
+        margin-bottom: 32px;
+        &::after {
+          content: url(../assets/faq-mobile-arrow.svg);
+          margin-left: 28.5px;
+          vertical-align: text-top;
+        }
+      }
+    }
+    .content {
+      max-height: max-content;
+    }
+
+    .content,
+    .active {
+      transition: all 0.2s ease-out;
+      margin-bottom: 0;
+      &::after {
+        vertical-align: middle;
+        transform: rotate(-180deg);
+        display: inline-block;
+      }
+    }
+    .active + .content {
+      overflow: hidden;
+      max-height: 0;
+      transition: all 0.2s ease-out;
+    }
+
+    .question {
+      color: #333333;
+    }
+
+    .text {
+      color: #666666;
+      margin-bottom: 50px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      @include mqb(tablet) {
+        text-align: justify;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

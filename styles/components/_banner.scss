@@ -1,0 +1,140 @@
+.banner {
+  height: 100vh;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  // @mixin mqb($mobile){
+  //     background-image: url(../assets/mobile-bannerbg.svg);
+  // }
+  @include mqb(tablet) {
+    background-image: none;
+    background-size: cover;
+  }
+  //   .banner-image-conatiner {
+  //     img {
+  //       transform: scale(1.2);
+  //     }
+  //   }
+
+  .banner-image-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: all 0.5s;
+    width: 100%;
+    display: flex;
+    img {
+      width: 100%;
+      object-fit: cover;
+      flex: 0 0 100%;
+      transition: all 2s cubic-bezier(0.71, 0, 0.13, 1.02);
+      transform: scale(1);
+      &.active {
+        transform: scale(1.1);
+      }
+    }
+    @include mqb(tablet) {
+      top: 0px;
+      left: 0px;
+      right: auto;
+      height: 450px;
+      width: 100%;
+      // display: flex;
+      // justify-content: center;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    // &.animation-fade-out-in {
+    //   animation: fade-out-in 1s;
+    // }
+    img {
+      height: 100%;
+      opacity: 0;
+      // transform: scale(1.2);
+    }
+  }
+
+  &.image-settle {
+    .banner-image-container {
+      &.position-absolute {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &.desktop-image-container {
+        @include mqb(tablet) {
+          display: none;
+        }
+      }
+      &.mobile-image-container {
+        display: none;
+        @include mqb(tablet) {
+          display: flex;
+        }
+      }
+      // position: absolute;
+      // top: 0px;
+      // right: 0px;
+      // height: 100vh;
+      // overflow: hidden;
+      img {
+        animation: image-settle 1s;
+        height: 100%;
+        opacity: 1;
+      }
+      // display: none;
+    }
+    @keyframes image-settle {
+      from {
+        transform: scale(1.2);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    // @keyframes fade-out-in {
+    //   from {
+    //     opacity: 1;
+    //   }
+    //   50% {
+    //     opacity: 0;
+    //   }
+    //   to {
+    //     opacity: 1;
+    //   }
+    // }
+  }
+
+  .cta-button {
+    position: absolute;
+    left: calc(15% - 197px / 2);
+    top: calc(80% - 63px / 2);
+    @include mqb(tablet) {
+      top: unset;
+      left: 20px;
+      bottom: 40px;
+      padding: 12px 34px;
+      // border: none;
+      // background: #fff;
+      font-size: 12px;
+    }
+  }
+  h2 {
+    padding-bottom: 0;
+  }
+}

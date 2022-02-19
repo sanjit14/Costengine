@@ -1,0 +1,122 @@
+.products {
+  padding: 95px 0 57px;
+  background: #f9f9f9;
+  text-align: center;
+  @include mqb(tablet) {
+    display: none;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  h2 {
+    padding-bottom: 0;
+    color: #333333;
+    font-family: EB Garamond, serif;
+    font-size: 38px;
+    @include mqb(desktop) {
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+
+  p {
+    margin-top: 18px;
+    color: #666666;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    @include mqb(desktop) {
+      font-size: 16px;
+    }
+    line-height: 160%;
+  }
+
+  ul {
+    display: flex;
+    padding: 51px 0 71px;
+    .image-container {
+      position: relative;
+      &:hover {
+        img {
+          &:first-child {
+            opacity: 0;
+          }
+          &:last-child {
+            opacity: 1;
+          }
+        }
+      }
+      img {
+        transition: all 0.4s;
+        &:first-child {
+          opacity: 1;
+        }
+        &:last-child {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+      color: #333333;
+      font-family: Montserrat, sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      @include mqb(desktop) {
+        font-size: 14px;
+      }
+      @include mqb(tablet) {
+        font-size: 12px;
+      }
+    }
+  }
+  .cta-button {
+    margin-top: 0;
+  }
+}
+
+.products-mobile {
+  display: none;
+  padding: 38px 0 52px;
+  background: #f9f9f9;
+  text-align: center;
+  @include mqb(tablet) {
+    display: block;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  h2 {
+    color: #333333;
+    font-family: EB Garamond, serif;
+    font-size: 20px;
+  }
+
+  ul {
+    display: flex;
+    padding: 51px 0 43px;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: -webkit-box;
+
+    li {
+      margin-left: 25px;
+    }
+
+    p {
+      margin-top: 20px;
+      color: #333333;
+      font-family: Montserrat, sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+    }
+  }
+
+  .cta-button {
+    margin-top: 0;
+  }
+}

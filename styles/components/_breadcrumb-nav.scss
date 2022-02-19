@@ -1,0 +1,39 @@
+.breadcrumb-nav {
+  padding-top: 248px;
+  @include mqb(desktop){
+    padding-top: 200px;
+  }
+  @media only screen and (max-height: 715px) {
+    padding-top: 100px;
+  }
+  @media only screen and (max-height: 520px) {
+    padding-top: 80px;
+  }
+  @include mqb(mobile) {
+    padding-top: 345px;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    &::before {
+      content: url(../assets/breadcrumb-arrow.svg);
+      margin-right: 18px;
+    }
+
+    .breadcrumb-item {
+      margin-right: 14px;
+      a {
+        color: #333333;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        @include mqb(mobile) {
+          font-size: 14px;
+        }
+      }
+      &:not(:last-of-type)::after {
+        content: "/";
+        padding-left: 14px;
+      }
+    }
+  }
+}

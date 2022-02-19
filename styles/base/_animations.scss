@@ -1,0 +1,9 @@
+.hover-zoom-in {
+  overflow: hidden;
+  img {
+    transition: all 0.8s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

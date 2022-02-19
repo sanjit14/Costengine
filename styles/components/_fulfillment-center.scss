@@ -1,0 +1,157 @@
+.fulfillment-center {
+  padding: 156px 0 248px;
+  @include mqb(desktop) {
+    padding: 140px 0 100px !important;
+  }
+  @include mqb(mobile) {
+    padding: 54px 0 54px;
+  }
+  .wrapper {
+    width: 95.6%;
+    text-align: center;
+    ul.center-images {
+      display: flex;
+      justify-content: center;
+      margin: 06px 0 57px;
+      @include mqb(mobile) {
+        margin: 32px 0 50px 8px;
+      }
+      li {
+        margin-right: 5px;
+        @include mqb(mobile) {
+          margin-right: 1px;
+        }
+        .mobile-image {
+          display: none;
+          @include mqb(mobile) {
+            display: block;
+          }
+        }
+        .desktop-image {
+          @include mqb(mobile) {
+            display: none;
+          }
+        }
+      }
+    }
+    p {
+      width: 75.6%;
+      margin: 0 auto;
+      color: #666666;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      line-height: 160%;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(mobile) {
+        width: 80%;
+        color: #666666;
+        font-weight: 300;
+        font-size: 12px;
+      }
+    }
+    ul.center-address {
+      margin-top: 109px;
+      display: flex;
+      justify-content: space-between;
+      @include mqb(desktop) {
+        flex-wrap: wrap;
+      }
+      @include mqb(tablet) {
+        margin-top: 50px;
+        flex-direction: column;
+      }
+
+      li {
+        &:nth-of-type(3), &:nth-of-type(4) {
+          width: 28%;
+        }
+        @include mqb(desktop) {
+          width: 50%;
+          padding-bottom: 60px;
+          &:nth-of-type(3), &:nth-of-type(4) {
+            width: 50%;
+          }
+        }
+        @include mqb(tablet) {
+          width: 100%;
+          padding-bottom: 60px;
+          &:nth-of-type(3), &:nth-of-type(4) {
+            width: 100%;
+          }
+        }
+      }
+      h2 {
+        padding-bottom: 36px;
+        @include mqb(tablet) {
+          padding-bottom: 14px;
+          font-size: 14px;
+        }
+      }
+      div {
+        display: flex;
+        width: 97%;
+        margin: 0 auto;
+        div {
+          width: 46.3%;
+          color: #666666;
+          font-family: Montserrat, sans-serif;
+          font-size: 16px;
+          line-height: 170%;
+          &:first-of-type {
+            text-align: right;
+          }
+          &:last-of-type {
+            text-align: left;
+          }
+          @include mqb(desktop) {
+            font-size: 12px;
+            font-weight: 300;
+          }
+          @include mqb(tablet) {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+      .address {
+        width: 73%;
+        margin: 0 auto 36px;
+        color: #666666;
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        line-height: 160%;
+        display: flex;
+        justify-content: center;
+        @include mqb(desktop) {
+          font-size: 16px;
+          width: 40%;
+        }
+        @include mqb(laptop) {
+          font-size: 16px;
+          width: 60%;
+        }
+        @include mqb(tablet) {
+          width: 55.8%;
+          margin: 0 auto 14px;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+      .contact-details {
+        display: flex;
+        .contact-1 {
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column;
+        }
+        .contact-2 {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

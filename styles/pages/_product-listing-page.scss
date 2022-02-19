@@ -1,0 +1,123 @@
+.product-listing-page {
+  .banner {
+    background: none;
+    background-size: cover;
+    background-position: right;
+    @include mqb(tablet) {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wrapper {
+      width: 86.84%;
+      @include mqb(tablet) {
+        position: relative;
+        height: 100vh;
+      }
+      .breadcrumb-nav {
+        position: absolute;
+        bottom: 62%;
+      }
+      .content {
+        padding-top: 305px;
+        @include mqb(laptop) {
+          padding-top: 68px;
+          margin-left: 17px;
+        }
+        p {
+          width: 55%;
+          margin-top: 50px;
+          color: #666666;
+          font-family: Montserrat, sans-serif;
+          font-size: 20px;
+          line-height: 160%;
+          @include mqb(desktop) {
+            font-size: 16px;
+            width: 60%;
+          }
+          @include mqb(tablet) {
+            width: 100%;
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 160%;
+          }
+        }
+        .cursive-title {
+          color: #333333;
+          @include mqb(tablet) {
+            font-size: 70px;
+          }
+        }
+      }
+    }
+  }
+
+  .product-list {
+    padding: 146px 0 135px;
+    @include mqb(tablet) {
+      padding: 45px 0 59px;
+    }
+    .wrapper {
+      width: 66.68%;
+      text-align: center;
+      @include mqb(tablet) {
+        width: 88.89%;
+      }
+      li {
+        position: relative;
+        margin-bottom: 160px;
+        @include mqb(tablet) {
+          margin-bottom: 20px;
+        }
+        p {
+          color: #333333;
+          font-family: Garamond, serif;
+          font-size: 38px;
+          position: absolute;
+          left: 3.9%;
+          bottom: 50px;
+          @include mqb(desktop) {
+            font-size: 30px;
+          }
+          @include mqb(tablet) {
+            font-size: 20px;
+            bottom: 12px;
+          }
+        }
+        &:last-of-type {
+          margin-bottom: 135px;
+          @include mqb(tablet) {
+            margin-bottom: 45px;
+          }
+          > p {
+            color: #ffffff;
+          }
+        }
+        .mobile-image,
+        .desktop-image {
+          overflow: hidden;
+          img {
+            width: 100%;
+            transition: all 1s ease;
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+      .view-more {
+        color: #666666;
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        text-decoration-line: underline;
+        @include mqb(tablet) {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.collaborating {
+  padding: 144px 0;
+  // background: url(../assets/collabbg.svg) no-repeat;
+  background-position: 13% 50%;
+
+  @include mqb(laptop) {
+    padding: 83px 0 63px;
+    background: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    // padding: 145px 0 267px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include mqb(laptop) {
+      padding: 0;
+      display: block;
+      width: 100%;
+    }
+    h2 {
+      padding-right: 90px;
+      @include mqb(laptop) {
+        padding: 0;
+        line-height: 1.4;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-family: Montserrat, serif;
+      font-size: 20px;
+      margin: 18px auto 0;
+      color: #666666;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(tablet) {
+        font-size: 12px;
+        color: #666666;
+        width: 66.4%;
+      }
+    }
+
+    .content {
+      width: 29%;
+      margin-right: 200px;
+      @include mqb(desktop) {
+        width: 70%;
+        margin-right: 0;
+      }
+      @include mqb(laptop) {
+        width: 77%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    .mobile-image {
+      display: none;
+      @include mqb(laptop) {
+        display: block;
+      }
+    }
+
+    .desktop-image {
+      @include mqb(laptop) {
+        display: none;
+      }
+    }
+
+    .computer-image {
+      display: none;
+      @include mqb(laptop) {
+        display: block;
+        text-align: center;
+      }
+      img {
+        @include mqb(laptop) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

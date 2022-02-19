@@ -1,0 +1,314 @@
+footer {
+  padding: 104px 0 124px;
+
+  background: #efefef;
+
+  @include mqb(desktop) {
+    padding: 74px 0 20px;
+  }
+  @include mqb(mobile) {
+    padding: 46px 0;
+  }
+  .wrapper {
+    width: 83.49%;
+    @include mqb(desktop) {
+      width: 90%;
+    }
+    display: flex;
+    justify-content: space-between;
+    @include mqb(mobile) {
+      flex-direction: column-reverse;
+      width: 77%;
+    }
+    @include mqb(laptop) {
+      flex-direction: column-reverse;
+    }
+    @include mqb(tablet) {
+      flex-direction: column-reverse;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      @include mqb(mobile) {
+        flex-direction: column;
+      }
+
+      > div {
+        margin-right: 66px;
+        overflow: hidden;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        @include mqb(desktop) {
+          margin-right: 80px;
+        }
+        @include mqb(mobile) {
+          margin-right: 0;
+          margin-top: 24px;
+        }
+        @include mqb(tablet) {
+          margin-right: 0;
+        }
+        @include mqb(laptop) {
+          margin-right: 0;
+        }
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          .arrow-down {
+            transition: all 0.3s ease-out;
+          }
+        }
+
+        .arrow-down {
+          display: none;
+          @include mqb(mobile) {
+            display: block;
+          }
+        }
+        h3 {
+          margin-bottom: 19px;
+          font-family: Montserrat, sans-serif;
+          color: #333333;
+          font-size: 20px;
+          @include mqb(desktop) {
+            font-size: 16px;
+          }
+
+          @include mqb(mobile) {
+            font-size: 12px;
+            margin-bottom: 12px;
+          }
+        }
+        li {
+          margin-bottom: 27px;
+          @include mqb(mobile) {
+            margin-bottom: 10px;
+          }
+
+          a {
+            color: #888888;
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            @include mqb(desktop) {
+              font-size: 14px;
+            }
+
+            @include mqb(mobile) {
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      .content {
+        max-height: 200px;
+      }
+      .content,
+      .active {
+        transition: all 0.3s ease-out;
+        margin-bottom: 0;
+        .arrow-down {
+          display: flex;
+          align-items: center;
+          transition: all 0.3s ease-out;
+          transform: rotate(-180deg);
+        }
+      }
+      .active + .content {
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    .footer-form {
+      width: 42.4%;
+      text-align: center;
+      @include mqb(mobile) {
+        width: 100%;
+      }
+      @include mqb(laptop) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      @include mqb(tablet) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-bottom: 36px;
+        font-family: Garamond, serif;
+        font-size: 33px;
+        color: #333333;
+        @include mqb(desktop) {
+          font-size: 26px;
+          margin-bottom: 0px;
+        }
+
+        @include mqb(mobile) {
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+      }
+      form {
+        // padding-bottom: 125px;
+        padding-bottom: 89px;
+        @include mqb(mobile) {
+          padding-bottom: 33px;
+        }
+        .radio-btns {
+          margin-bottom: 24px;
+          display: flex;
+          justify-content: space-between;
+          @include mqb(desktop) {
+            div {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              label {
+                margin-top: 8px;
+              }
+            }
+          }
+          @include mqb(tablet) {
+            flex-direction: row;
+            text-align: start;
+            margin-bottom: 15px;
+          }
+
+          @include mqb(mobile) {
+            flex-direction: column;
+            text-align: start;
+            margin-bottom: 15px;
+          }
+
+          div {
+            margin-right: 13px;
+            display: flex;
+            &:last-of-type {
+              margin-right: 0;
+            }
+            @include mqb(mobile) {
+              margin-bottom: 15px;
+            }
+            @include mqb(tablet) {
+              flex-direction: row;
+              margin-bottom: 15px;
+            }
+          }
+          label {
+            margin-left: 14px;
+            font-family: Montserrat, sans-serif;
+            color: #333333;
+            font-size: 20px;
+            text-align: left;
+            @include mqb(desktop) {
+              font-size: 14px;
+            }
+
+            @include mqb(mobile) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        input[type="text"] {
+          padding: 8px 20px;
+          border: none;
+          border-radius: 4px;
+
+          &::placeholder {
+            color: #999999;
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            @include mqb(desktop) {
+              font-size: 16px;
+            }
+
+            @include mqb(mobile) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .name {
+          width: 100%;
+          margin-bottom: 12px;
+        }
+
+        .email-id,
+        .phone-no {
+          width: 50%;
+          margin: -1px;
+
+          @include mqb(mobile) {
+            width: 100%;
+            margin-bottom: 12px;
+          }
+        }
+        .checkbox {
+          text-align: left;
+          display: flex;
+          align-items: center;
+          margin-top: 36px;
+          input {
+            margin-right: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            background: #EFEFEF;
+            border: 2px solid #CCCCCC;
+            // box-sizing: border-box;
+          }
+          p {
+            color: #999999;
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 4px;
+            @include mqb(tablet){
+              font-size: 12px;
+            }
+          }
+          .bold {
+            font-size: 14px;
+            color: #666666;
+            @include mqb(tablet){
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .error-pages {
+        text-align: end;
+        span {
+          margin-right: 42px;
+          a {
+            font-family: "EB Garamond, serif";
+            font-size: 14px;
+            @include mqb(desktop) {
+              font-size: 12px;
+            }
+            color: #666666;
+          }
+        }
+
+        @include mqb(mobile) {
+          display: none;
+        }
+        @include mqb(laptop) {
+          display: none;
+        }
+        @include mqb(tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+}

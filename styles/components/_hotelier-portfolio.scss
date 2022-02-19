@@ -1,0 +1,127 @@
+.hotelier-portfolio {
+  padding: 153px 0 88px;
+  text-align: center;
+  @include mqb(tablet) {
+    padding: 65px 0 80px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  p {
+    width: 66%;
+    margin: 0 auto;
+    color: #666666;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 160%;
+    @include mqb(desktop) {
+      font-size: 16px;
+      width: 55%;
+    }
+    @include mqb(tablet) {
+      width: 90%;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .subtitle {
+    width: 35%;
+    font-family: EB Garamond, serif;
+    font-size: 28px;
+    line-height: 31px;
+  }
+
+  ul {
+    margin: 130px 0 98px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mqb(tablet) {
+      margin: 33px 0 40px;
+    }
+
+    li {
+      position: relative;
+      margin: 0 -4px -4px 0;
+      width: 33.4%;
+      transition: all 0.3s ease;
+      @include mqb(tablet) {
+        width: 50%;
+      }
+      &:hover .overlay {
+        transition: all 0.3s ease;
+        display: block;
+        @include mqb(tablet){
+          background: rgba(33, 33, 33, 0.267);
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+      p {
+        width: unset;
+        position: absolute;
+        bottom: 48px;
+        left: 55px;
+        color: #ffffff;
+        font-family: Garamond, serif;
+        font-size: 38px;
+        font-weight: normal;
+        @include mqb(desktop) {
+          font-size: 28px;
+        }
+        @include mqb(tablet) {
+          font-size: 14px;
+          bottom: 14px;
+          left: 10px;
+        }
+      }
+
+      .desktop-image {
+        @include mqb(tablet){
+          display: none;
+        }
+      }
+      .mobile-image {
+        display: none;
+        @include mqb(tablet){
+          display: block;
+        }
+      }
+      .overlay {
+        width: 99%;
+        height: 99%;
+        display: none;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: rgba(33, 33, 33, 0.616);
+        transition: all 0.3s ease;
+        @include mqb(tablet){
+            display: block;
+            background: rgba(33, 33, 33, 0.267);
+            p{
+              display: none;
+            }
+        }
+      }
+      .mobile-text {
+        display: none;
+        @include mqb(tablet){
+          display: block;
+          font-size: 20px;
+          left: 20px;
+          bottom: 30px;
+        }
+        @include mqb(mobile){
+          font-size: 12px;
+          left: 10%;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}

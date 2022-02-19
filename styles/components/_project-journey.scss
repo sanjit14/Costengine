@@ -1,0 +1,167 @@
+.project-journey {
+  padding-bottom: 116px;
+  @include mqb(tablet) {
+    padding-bottom: 79px;
+  }
+  .wrapper {
+    width: 77.8%;
+    text-align: center;
+    @include mqb(desktop) {
+      width: 92%;
+    }
+
+    > p {
+      margin: 52px 0 40px;
+      font-family: Montserrat, sans-serif;
+      color: #666666;
+      font-size: 20px;
+      line-height: 160%;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(tablet) {
+        margin: 30px 0 23px;
+        font-weight: 300;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .steps-container {
+    @include mqb(tablet){
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .left-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8px;      
+    }
+    .right-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;      
+    }
+    .mobile-image{
+      @include mqb(tablet){
+        display: block;
+      }
+    }
+  }
+  ul {
+    padding: 70px 0;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0.5px solid #999999;
+    display: flex;
+    justify-content: space-evenly;
+    @include mqb(laptop){
+      flex-wrap: wrap;
+    }
+    @include mqb(tablet) {
+      width: 100%;
+      padding: 30px 0;
+      // flex-direction: column;
+      display: -webkit-box;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: scroll;
+        
+        #list-container {
+        overflow:hidden;    
+        width: 300px;  
+        overflow-x: scroll; 
+        }
+        
+        .list{
+        min-width:1400px;
+        }
+        
+        .item{
+          width:240px;
+          position: relative;
+        }
+        
+    }
+
+
+    .hide-steps {
+      display: flex;
+      justify-content: space-between;
+      @include mqb(tablet) {
+        display: none;
+      }
+    }
+
+    > li {
+      @include mqb(desktop) {
+        margin-right: 17px;
+      }
+    }
+
+    li {
+      width: 12.5%;
+      @include mqb(desktop) {
+        width: 16.5%;
+      }
+      @include mqb(laptop){
+        width: 33.5%;
+        margin-bottom: 35px;
+      }
+      @include mqb(tablet) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 6%;
+        
+      }
+    }
+    .step {
+      color: #333333;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(tablet) {
+        font-size: 12px;
+      }
+    }
+
+    .text {
+      color: #666666;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      line-height: 160%;
+      margin-top: 20px;
+      @include mqb(desktop) {
+        font-size: 16px;
+      }
+      @include mqb(tablet) {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .cta-links {
+    display: none;
+    @include mqb(tablet) {
+      display: block;
+    }
+  }
+
+  .cta-button {
+    @include mqb(laptop) {
+      padding: 2%;
+    }
+    @include mqb(tablet) {
+      padding: 2%;
+      display: none;
+    }
+  }
+
+
+}

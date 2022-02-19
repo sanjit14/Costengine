@@ -1,0 +1,73 @@
+.tulio-desc {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mqb(desktop) {
+    padding: 0 150px;
+  }
+  @include mqb(tablet) {
+    padding: 0;
+  }
+  .wrapper {
+    // width: 840px;
+    width: 900px;
+    text-align: center;
+    @include mqb(desktop) {
+      width: 82.5%;
+    }
+    @include mqb(tablet) {
+      width: 90%;
+    }
+    p {
+      margin-bottom: 50px;
+      padding: 0 20px;
+      font-family: Montserrat, sans-serif;
+      @include mqb(tablet) {
+        padding: 0;
+      }
+    }
+
+    .videos {
+      position: relative;
+      video {
+        width: 100%;
+      }
+      .play-btn-white {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50px, -50px);
+        transform: translate(-50px, -50px);
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+     }
+     .hide {
+      display: none;
+    }
+    }
+
+  }
+  div {
+    line-height: 32px;
+    color: #333333;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+    @include mqb(desktop) {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    @include mqb(tablet) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+  div {
+    display: inline-block;
+  }
+}

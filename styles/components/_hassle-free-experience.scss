@@ -1,0 +1,76 @@
+.hassle-free-experience {
+  background: none;
+  background-size: cover;
+  background-position: center;
+  padding: 365px 0 344px;
+  overflow: hidden;
+  @include mqb(tablet) {
+    padding: 45px 0 466px;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  position: relative;
+  &:hover {
+    .image-container {
+      transform: scale(1.1);
+    }
+  }
+  .image-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &.desktop-image-container {
+      @include mqb(tablet) {
+        display: none;
+      }
+    }
+    &.mobile-image-container {
+      display: none;
+      @include mqb(tablet) {
+        display: block;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    width: 45%;
+    @include mqb(desktop) {
+      width: 75%;
+    }
+    @include mqb(laptop) {
+      width: 75%;
+    }
+    @include mqb(tablet) {
+      width: 100%;
+    }
+    p {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      color: #333333;
+      line-height: 32px;
+      @include mqb(desktop) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      @include mqb(tablet) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    .cta-button {
+      padding: 13px 24px;
+    }
+  }
+}

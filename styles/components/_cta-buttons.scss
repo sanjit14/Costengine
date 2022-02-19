@@ -1,0 +1,58 @@
+.cta-button {
+  margin-top: 55px;
+  padding: 18px 56px;
+  border: 1px solid #333333;
+  background: transparent;
+  color: #333333;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  transition: all 0.2s;
+  outline: none;
+  @include mqb(desktop) {
+    padding: 14px 38px;
+    font-size: 14px;
+  }
+  &:hover {
+    // border: 2px solid #333333;
+    // cursor: pointer;
+    transform: scale(1.01);
+    font-weight: 500;
+  }
+
+  &:focus {
+    // border: 1px solid #333333;
+    // background-color: #fcfcfc;
+    // color: initial;
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+  @include mqb(laptop) {
+    padding: 2% 3%;
+  }
+  @include mqb(tablet) {
+    margin-top: 28px;
+    font-size: 12px;
+    padding: 11px 17px;
+  }
+}
+
+.cta-links {
+  margin-top: 57px;
+  border: none;
+  background: transparent;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  color: #111111;
+  &::after {
+    content: url(../assets/Vector.svg);
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+  @include mqb(tablet) {
+    margin-top: 33px;
+    font-size: 14px;
+    padding: 0;
+    font-weight: 500;
+  }
+}

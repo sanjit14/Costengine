@@ -1,0 +1,38 @@
+.signup-page {
+	.signup-form {
+		width: 25.83%;
+		@include mqb(desktop){
+			width: 50%;
+		}
+		@include mqb(tablet){
+			width: 100%;
+   		margin: 140px auto 0;
+		}
+		h2{
+			padding-bottom: 0;
+			margin-bottom: 40px;
+			margin-left: 22px;
+		}
+
+		.buttons {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 37px;
+			@include mqb(tablet){
+				width: 87.8%;
+    		margin: 51px auto 0;
+			}
+			.cta-button {
+				padding: 20px 57px;
+				@include mqb(tablet){
+					padding: 11px 43px;
+				}
+			}
+			.dark {
+				background: #333333;
+				color: #ffffff;
+			}
+		}
+	}
+}
